@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Data/Data.iml" filepath="$PROJECT_DIR$/.idea/modules/Data/Data.iml" group="StockControl/Data" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Domain/Domain.iml" filepath="$PROJECT_DIR$/.idea/modules/Domain/Domain.iml" group="StockControl/Domain" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Remote/Remote.iml" filepath="$PROJECT_DIR$/.idea/modules/Remote/Remote.iml" group="StockControl/Remote" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/StockControl.iml" filepath="$PROJECT_DIR$/.idea/modules/StockControl.iml" group="StockControl" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mobile-ui/mobile-ui.iml" filepath="$PROJECT_DIR$/.idea/modules/mobile-ui/mobile-ui.iml" group="StockControl/mobile-ui" />
     </modules>
   </component>
 </project>

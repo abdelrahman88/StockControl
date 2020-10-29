@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ELGAZZAR</string>
+    <string name="item_details">بيانات الصنف</string>
+    <string name="item_no">رقم الصنف</string>
+    <string name="item_name">اسم الصنف</string>
+    <string name="item_price">سعر الصنف</string>
+    <string name="item_in_stocks">الصنف فى المخازن</string>
+    <string name="available_qty">الكمية المتاحة</string>
+    <string name="reserved_qty">الكمية المحجوزة</string>
+    <string name="stock_name">المخزن</string>
+    <string name="invoices">فواتير الحجز</string>
+    <string name="sales_man">المندوب</string>
+    <string name="customer">العميل</string>
+    <string name="invoice_date">تاريخ الفاتورة</string>
+    <string name="invoice_no">رقم الفاتورة</string>
+    <string name="invoice_qty">الكمية بالفاتورة</string>
+    <string name="ok">موافق</string>
+    <string name="scan_another_code">لعرض صنف آخر اضغط هنا</string>
+    <string name="connection_error">من فضلك تأكد من اتصالك بالشبكة وحاول مرة أخرى</string>
+    <string name="general_error">حدث خطأ ما من فضلك حاول مرة أخرى لاحقا</string>
+    <string name="empty_item">لا توجد بيانات لهذا الصنف</string>
+
+</resources>

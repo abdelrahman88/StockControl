@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+    defaultConfig {
+        applicationId "com.stockcontrol.mobile_ui"
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionCode 1
+        versionName "1.0"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation project(':Domain')
+    implementation project(':Data')
+    implementation project(':Remote')
+
+
+    def mobileUiDependencies = rootProject.ext.mobileUiDependencies
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation mobileUiDependencies.javaxAnnotation
+    implementation mobileUiDependencies.javaxInject
+    implementation mobileUiDependencies.rxKotlin
+    implementation mobileUiDependencies.kotlin
+    implementation mobileUiDependencies.rxAndroid
+    implementation mobileUiDependencies.androidxCoreKtx
+    implementation mobileUiDependencies.fragmentKtx
+    implementation mobileUiDependencies.lifecycleRuntime
+    implementation mobileUiDependencies.lifecycleExtensions
+    implementation mobileUiDependencies.lifecycleViewmodel
+    implementation mobileUiDependencies.lifecycleLivedata
+    implementation mobileUiDependencies.legacyV4
+    implementation mobileUiDependencies.legacyV13
+    implementation mobileUiDependencies.appCompat
+    implementation mobileUiDependencies.recyclerView
+    implementation mobileUiDependencies.constraintlayout
+    implementation mobileUiDependencies.okHttp
+    implementation mobileUiDependencies.okHttpLogger
+
+    implementation mobileUiDependencies.moshi
+
+    implementation mobileUiDependencies.moshiAdapters
+    implementation mobileUiDependencies.moshiKotlin
+
+    kapt mobileUiDependencies.lifecycleCompiler
+
+    //dagger
+    implementation mobileUiDependencies.dagger
+    kapt mobileUiDependencies.daggerCompiler
+
+    implementation mobileUiDependencies.daggerAndroid
+    implementation mobileUiDependencies.daggerAndroidSupport
+    kapt mobileUiDependencies.daggerAndroidProcessor
+
+    implementation mobileUiDependencies.scanner
+
+}

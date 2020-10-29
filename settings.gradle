@@ -1,3 +1,5 @@
+include ':mobile-ui'
+include ':Remote'
 include ':Data'
 include ':Domain'
 rootProject.name = "StockControl"
